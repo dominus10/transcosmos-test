@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <image src="./asset/circle.png" id="circle1"/>
+        <image src="./asset/circle.png" id="circle2"/>    
+        <image src="./asset/line.png" id="line1"/>
+        <image src="./asset/line.png" id="line2"/>     
+        <image src="./asset/triangle.png" id="triangle1"/>
+        <image src="./asset/triangle.png" id="triangle2"/>     
+        <image src="./asset/plus.png" id="plus1"/>
+        <image src="./asset/plus.png" id="plus2"/>    
+        <image src="./asset/plus.png" id="plus3"/>           
+        <div class="spacer">
+            <div>
+                <button class="menu">&#x2630;</button>
+            </div>
+            <div class="drawer">
+                <ol>
+                    <li>
+                        <a href="#" class="closeDrawer">X</a>
+                    </li>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Services</a>
+                    </li>
+                    <li>
+                        <a href="#">Our Project</a>
+                    </li>
+                    <li>
+                        <a href="#">About Us</a>
+                    </li>
+                </ol>
+            </div>
+            <button class="logo">
+                <img src="./asset/logo.png"/>
+                <h2>Enver</h2>
+            </button>
+            <ol>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <li>
+                    <a href="#">Our Project</a>
+                </li>
+                <li>
+                    <a href="#">About Us</a>
+                </li>
+            </ol>
+            <button class="contact-us">Contact Us</button>
+        </div>
+        <div class="big">
+            <h1>Build Your Awesome Platform</h1>
+        </div>
+        <div class="img-clip">
+            <div></div>
+            <div></div>
+            <div>
+                <image src="./asset/guy2.png"/>
+            </div>
+        </div>
+        <div class="small">
+            <p>Enver studio is a digital studio that offers several services such as UI/UX Design to developers, we will provide the best service for those of you who use our services.</p>
+        </div>
+        <div class="port">
+            <h1>Why Enver Is The Best Choice?</h1>
+            <p>Watch this one minute video so you understand why you should use our services!</p>
+        </div>
+        <div class="vidyaplayer">
+            <video id="video" muted>
+                <source src="https://www.w3schools.com/tags/movie.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a id="vidya">&#9658;</a>
+        </div>
+        <div>
+            <h1>The Service We Provide For You</h1>
+        </div>
+        <div>
+            <div class="grid-list">
+                <div>
+                    <div><image src="./asset/1.svg"></image></div>
+                    <h4>Development</h4>
+                    <p>Create a platform with the best and coolest quality from us.</p>
+                </div>
+                <div>
+                    <div><image src="./asset/2.svg"></image></div>
+                    <h4>UI/UX Designer</h4>
+                    <p>We provide UI/UX Design services, and of course with the best quality.</p>
+                </div>
+                <div>
+                    <div><image src="./asset/3.svg"></image></div>
+                    <h4>Graphic Designer</h4>
+                    <p>We provide Graphic Design services, with the best designers.</p>
+                </div>
+                <div>
+                    <div><image src="./asset/4.svg"></image></div>
+                    <h4>Motion Graphic</h4>
+                    <p>Create a platform with the best and coolest quality from us.</p>
+                </div>
+                <div>
+                    <div><image src="./asset/5.svg"></image></div>
+                    <h4>Photography</h4>
+                    <p>We provide Photography services, and of course with the best quality.</p>
+                </div>
+                <div>
+                    <div><image src="./asset/6.svg"></image></div>
+                    <h4>Videography </h4>
+                    <p>Create a platform with the best and coolest quality from us.</p>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio">
+            <h1>Our Awesome Portofolio</h1>
+            <div class="image-window">
+                <div class="img-container"><image src="./asset/port1.png"/></div>
+                <div class="img-container"><image src="./asset/port2.png"/></div>
+                <div class="img-container"><image src="./asset/port3.png"/></div>
+            </div>
+        </div>
+        <div class="big-space">
+            <h1>Contact us for the service you want to use</h1>
+            <button id="seconds">Contact us</button>
+        </div>
+    </div>
+</body>
+<footer>
+    <button class="logo">
+        <img src="./asset/logo.png"/>
+        <h2>Enver</h2>
+    </button>
+    <ol>
+        <li>
+            <a href="#">Support </a>
+        </li>
+        <li>
+            <a href="#">Privacy Policy</a>
+        </li>
+        <li>
+            <a href="#">Terms and Conditions</a>
+        </li>
+    </ol>
+    <p>© 2020 Enver, All Rights Reserved</p>
+</footer>
+<script>
+    const play = document.getElementById("vidya");
+    vidya.addEventListener("click", function() {
+        video.play();
+        play.style.display = 'none'
+    });
+    const pause = document.getElementById("video");
+    video.addEventListener("click", function() {
+        if(video.paused == true){
+            video.play();
+            play.style.display = 'none'
+        }else{
+            video.pause();
+            play.style.display = 'block'
+        }
+    });
+    const open = document.getElementsByClassName("menu");
+    for (var i = 0; i < open.length; i++) {
+        open[i].addEventListener("click",function (event){
+            event.preventDefault();
+            const drawer = document.getElementsByClassName("drawer");
+            for (var i = 0; i < drawer.length; i++) {
+                drawer[i].classList.add("show");
+                document.body.style.overflow = "hidden";
+            }
+        });
+    }
+    
+    const close = document.getElementsByClassName("closeDrawer");
+    for (var i = 0; i < close.length; i++) {
+        close[i].addEventListener("click",function (event){
+            event.preventDefault();
+            const drawer = document.getElementsByClassName("drawer");
+            for (var i = 0; i < drawer.length; i++) {
+                drawer[i].classList.remove("show");
+                document.body.style.overflow = "scroll";
+            }
+        });
+    }
+</script>
+</html>
